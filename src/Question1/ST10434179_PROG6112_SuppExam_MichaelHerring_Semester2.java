@@ -16,7 +16,17 @@ public class ST10434179_PROG6112_SuppExam_MichaelHerring_Semester2 {
     public static void main(String[] args) {
         // TODO code application logic here
         
-           
+        int[][] data =  { 
+                            {320, 175, 380},
+                            {210, 125, 360}
+                        };
+    
+    
+    
+    
+    
+    
+    
     }
     
 }
