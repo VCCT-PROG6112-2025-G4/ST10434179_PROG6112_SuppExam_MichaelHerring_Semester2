@@ -4,19 +4,16 @@
  */
 package Question2;
 
+import Question2.Operations;
+
 /**
  *
  * @author micha
  */
 public class Main extends javax.swing.JFrame {
 
-                 //Planned Surgery | Unplanned Surgery | Emergency Surgery
-    
-    int[][] data =  { 
-                            {300, 150, 700},
-                            {250, 200, 600}
-                        };
-    
+    Operations operation = new Operations();
+
     
     /**
      * Creates new form Main
@@ -141,11 +138,36 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnProcessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessActionPerformed
+                                         
 
-       
+    int choice = cmbResults.getSelectedIndex();
+    txtOutput.setText("");  
 
+    switch (choice) {
 
+//both years
+        case 0:  
+            int total = operation.GetTotalOperations();
+            txtOutput.setText("Total Operations: " + total);
+            break;
 
+//year 1
+        case 1:  
+            int year1 = operation.GetTotalForYear(0);
+            txtOutput.setText("Total Operations for year 1: " + year1);
+            break;
+
+//year 2
+        case 2:  
+            int year2 = operation.GetTotalForYear(1);
+            txtOutput.setText("Total Operations for year 2: " + year2);
+            break;
+
+        default:
+            txtOutput.setText("Please select an option");
+    }
+
+}
 
         
     }//GEN-LAST:event_btnProcessActionPerformed
