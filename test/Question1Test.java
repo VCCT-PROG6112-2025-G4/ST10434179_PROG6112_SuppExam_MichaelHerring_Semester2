@@ -25,7 +25,7 @@ public class Question1Test {
 
         Operations operation = new Operations();
 
-        // Expected total = 1570
+       
         int expected = 1570;
         int actual = operation.TotalOperations(data);
 
@@ -41,10 +41,10 @@ public class Question1Test {
 
         Operations operation = new Operations();
 
-        double expected = 1570.0 / 6;  // 261.666666…
+        double expected = 1570.0 / 6; 
         double actual = operation.AverageOperations(data);
 
-        assertEquals(expected, actual, 0.0001); // delta for doubles
+        assertEquals(expected, actual, 0.0001); 
     }
 }
 
