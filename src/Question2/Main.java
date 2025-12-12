@@ -5,6 +5,9 @@
 package Question2;
 
 import Question2.Operations;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -60,6 +63,11 @@ public class Main extends javax.swing.JFrame {
         });
 
         btnSaveData.setText("SAVE DATA");
+        btnSaveData.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveDataActionPerformed(evt);
+            }
+        });
 
         txtOutput.setColumns(20);
         txtOutput.setRows(5);
@@ -183,6 +191,23 @@ public class Main extends javax.swing.JFrame {
         txtOutput.setText("");
         
     }//GEN-LAST:event_mnuClearActionPerformed
+
+    private void btnSaveDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveDataActionPerformed
+
+
+        try {
+    FileWriter myWriter = new FileWriter("data.txt");
+
+
+
+
+        } catch (IOException e) {
+            System.out.println("an error occured.");
+        }
+
+
+
+    }//GEN-LAST:event_btnSaveDataActionPerformed
 
     /**
      * @param args the command line arguments
