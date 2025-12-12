@@ -48,10 +48,10 @@ public class Operations implements IOperation{
             }
         }
         
-        //ChatGPT was consulted for this type cast "(double)"
-        
+        //ChatGPT was consulted for this type cast "(double)" and to use "Math.round" effectively (achieve the correct number of decimal points)
+                                                                                                //i was missing the .0 in 100.0
         double average = (double) total / count;
-        
+        average = Math.round(average * 100.0) / 100.0;
         return average;
         
         

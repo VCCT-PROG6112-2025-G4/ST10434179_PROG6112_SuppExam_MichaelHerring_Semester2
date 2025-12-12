@@ -4,6 +4,8 @@
  */
 package Question1;
 
+import java.util.Scanner;
+
 /**
  *
  * @author micha
@@ -22,6 +24,8 @@ public class ST10434179_PROG6112_SuppExam_MichaelHerring_Semester2 {
                         };
     
     
+        Operations operation = new Operations();
+
     
     
         System.out.println("Please enter the operation results to display: ");
@@ -30,6 +34,54 @@ public class ST10434179_PROG6112_SuppExam_MichaelHerring_Semester2 {
                 + "\n 3) \t Max Operations: "
                 + "\n 4) \t Min Operations: ");
     
+        
+        Scanner keyboard = new Scanner(System.in);
+        Integer input = keyboard.nextInt();
+        
+        
+        switch (input) {
+            case 1:
+                
+                System.out.println("HOSPITAL OPERATIONS APPLCATION");
+                System.out.println("-------------------------------------------");
+                System.out.println("Total Operations: \t " + operation.TotalOperations(data));
+                
+                break;
+                
+            case 2: 
+                
+                System.out.println("HOSPITAL OPERATIONS APPLCATION");
+                System.out.println("-------------------------------------------");
+                System.out.println("Average Operations: \t " + operation.AverageOperations(data));
+                
+                break;
+                
+            case 3:
+                
+                System.out.println("HOSPITAL OPERATIONS APPLCATION");
+                System.out.println("-------------------------------------------");
+                System.out.println("Max Operations: \t " + operation.MaxOperations(data));
+                
+                break;
+                
+            case 4: 
+                
+                System.out.println("HOSPITAL OPERATIONS APPLCATION");
+                System.out.println("-------------------------------------------");
+                System.out.println("Min Operations: \t " + operation.MinOperations(data));
+                
+                break;
+                
+            default:
+                
+                System.out.println("HOSPITAL OPERATIONS APPLCATION");
+                System.out.println("-------------------------------------------");
+                System.out.println("Total Operations: \t " + operation.TotalOperations(data));
+                
+                break;
+                
+        }
+        
     
     }
     
